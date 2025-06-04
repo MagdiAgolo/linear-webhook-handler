@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/linear-webhook.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
-} 
