@@ -1,11 +1,10 @@
 {
   "name": "linear-webhook-handler",
   "version": "1.0.0",
-  "description": "A webhook handler for Linear issues that automatically adds labels when issues are marked as Done",
+  "description": "A webhook handler for Linear issues that automatically adds the latest label from Release version group when issues are marked as Done",
   "main": "api/linear-webhook.js",
   "scripts": {
     "dev": "vercel dev",
-    "build": "vercel build",
     "deploy": "vercel"
   },
   "dependencies": {
