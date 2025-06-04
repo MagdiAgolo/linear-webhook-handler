@@ -2,25 +2,33 @@
 
 Automatically adds the latest "Release Version" label to Linear issues when they're marked as "Done".
 
-## 🚀 One-Click Deploy (Zero Manual Setup Required)
+## �� One-Click Deploy (100% Free - No Credit Card)
 
-### Option 1: Render.com (Recommended - Completely Free)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/MagdiAgolo/linear-webhook-handler)
+### Netlify (Recommended - Completely Free Forever)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/MagdiAgolo/linear-webhook-handler)
 
-### Option 2: Railway  
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/7WjX9y)
-
-### Option 3: Heroku
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MagdiAgolo/linear-webhook-handler)
+### Alternative Options (if needed)
+- **Railway**: [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/7WjX9y)
+- **Heroku**: [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MagdiAgolo/linear-webhook-handler)
 
 ## 📋 Setup Instructions
 
-1. Click any deploy button above
-2. Enter your Linear API Key when prompted (use your existing API key with read/write permissions)
-3. Copy the deployed URL (e.g., `https://your-app.render.com`)
-4. In Linear, go to Settings → API → Webhooks
-5. Create a new webhook with URL: `https://your-app.render.com/api/linear-webhook`
-6. Select events: "Issues" → "Updated"
+1. **Click "Deploy to Netlify" button above**
+2. **Authorize with GitHub** (just connects your repo)
+3. **Set environment variable**:
+   - Variable: `LINEAR_API_KEY`
+   - Value: Your Linear API key (the one with read/write permissions)
+4. **Click "Deploy site"**
+5. **Copy your webhook URL** (will be like: `https://amazing-site-name.netlify.app/api/linear-webhook`)
+6. **In Linear**: Settings → API → Webhooks → Create webhook
+   - URL: `https://your-site.netlify.app/api/linear-webhook`
+   - Events: "Issues" → "Updated" ✅
+
+## ✅ Test It!
+
+1. Create a test issue in Linear
+2. Mark it as "Done"
+3. Watch it automatically get your latest Release Version label!
 
 ## ✨ Features
 
