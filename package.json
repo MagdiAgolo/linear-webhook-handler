@@ -1,0 +1,29 @@
+{
+  "name": "linear-webhook-handler",
+  "version": "1.0.0",
+  "description": "A webhook handler for Linear issues that automatically adds labels when issues are marked as Done",
+  "main": "api/linear-webhook.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "linear",
+    "webhook",
+    "serverless",
+    "vercel",
+    "issue-tracking"
+  ],
+  "author": "",
+  "license": "MIT"
+} 
