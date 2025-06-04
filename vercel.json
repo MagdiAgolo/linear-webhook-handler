@@ -1,0 +1,12 @@
+{
+  "name": "linear-webhook-v2",
+  "version": 2,
+  "functions": {
+    "api/linear-webhook.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "env": {
+    "LINEAR_API_KEY": "@linear_api_key"
+  }
+} 
