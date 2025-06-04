@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     }
 
     try {
-      // First, get the latest label from "Release version" group
+      // First, get the latest label from "Release Version" group
       const labelsResponse = await fetch("https://api.linear.app/graphql", {
         method: "POST",
         headers: {
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
             query GetTeamLabels($teamId: String!) {
               team(id: $teamId) {
                 labels(
-                  filter: { parent: { name: { eq: "Release version" } } }
+                  filter: { parent: { name: { eq: "Release Version" } } }
                   orderBy: createdAt
                   last: 1
                 ) {
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
       const labels = labelsData.data?.team?.labels?.nodes;
       
       if (!labels || labels.length === 0) {
-        console.log("No labels found in 'Release version' group");
+        console.log("No labels found in 'Release Version' group");
         return res.status(200).end("No release version labels found");
       }
 
