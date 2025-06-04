@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: linear-webhook-handler
+    env: node
+    repo: https://github.com/MagdiAgolo/linear-webhook-handler.git
+    buildCommand: npm install
+    startCommand: node api/linear-webhook.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LINEAR_API_KEY
+        sync: false
+    routes:
+      - type: rewrite
+        source: /api/linear-webhook
+        destination: / 

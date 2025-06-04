@@ -1,21 +1,55 @@
 # Linear Webhook Handler
 
-A webhook handler for Linear that automatically adds the latest label from the "Release version" group to issues when they are marked as "Done".
+Automatically adds the latest "Release Version" label to Linear issues when they're marked as "Done".
 
-## Environment Variables
+## 🚀 One-Click Deploy (Zero Manual Setup Required)
 
-This project requires the following environment variable:
+### Option 1: Render.com (Recommended - Completely Free)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/MagdiAgolo/linear-webhook-handler)
 
-### Required Variables
+### Option 2: Railway  
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/7WjX9y)
 
-- `LINEAR_API_KEY` - Your Linear API key
+### Option 3: Heroku
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MagdiAgolo/linear-webhook-handler)
 
-### How to Get Your Linear API Key
+## 📋 Setup Instructions
 
-1. Go to [Linear Settings](https://linear.app/settings/api)
-2. Click "Create new API key"
-3. Give it a name (e.g., "Webhook Handler")
-4. Copy the generated API key
+1. Click any deploy button above
+2. Enter your Linear API Key when prompted (use your existing API key with read/write permissions)
+3. Copy the deployed URL (e.g., `https://your-app.render.com`)
+4. In Linear, go to Settings → API → Webhooks
+5. Create a new webhook with URL: `https://your-app.render.com/api/linear-webhook`
+6. Select events: "Issues" → "Updated"
+
+## ✨ Features
+
+- Automatically detects when issues are marked as "Done"
+- Finds the latest "Release Version" label in your workspace  
+- Adds the label to completed issues
+- Works across all teams in your Linear workspace
+- Zero configuration needed
+
+## 🔧 How it Works
+
+1. Listens for Linear webhook events
+2. When an issue state changes to "Done"
+3. Queries Linear API for the latest label in "Release Version" group
+4. Adds that label to the completed issue
+
+## 🧪 Testing
+
+The webhook handler includes comprehensive error handling and logging. All requests are logged for debugging purposes.
+
+## 📝 Environment Variables
+
+- `LINEAR_API_KEY`: Your Linear API key with read/write permissions
+
+## 🔒 Security
+
+- Uses HTTPS for all API communications
+- Validates webhook payloads
+- Minimal required permissions
 
 ## Local Development
 
