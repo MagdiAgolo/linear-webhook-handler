@@ -24,7 +24,7 @@ export default async function handler(req, res) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.LINEAR_API_KEY}`,
+          "Authorization": process.env.LINEAR_API_KEY,
         },
         body: JSON.stringify({
           query: `
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.LINEAR_API_KEY}`,
+          "Authorization": process.env.LINEAR_API_KEY,
         },
         body: JSON.stringify({
           query: `
